@@ -13,12 +13,12 @@ function* flatten(array, depth) {
 
 function sumItems(array) {
   let arrayNew = [...flatten(array, Infinity)];
-  console.log(arrayNew);
-  let total = 0;
-  for (const num of arrayNew) {
-    total += num;
-  }
-  return total;
+  // let total = 0;
+  // for (const num of arrayNew) {
+  //   total += num;
+  // }
+  // return total;
+  return arrayNew.reduce((total, num) => total + num);
 }
 
 module.exports = sumItems;
